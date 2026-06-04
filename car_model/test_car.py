@@ -18,3 +18,12 @@ def print_header(title):
     print(Color.CYAN + Color.BOLD +
           "  ╚══════════════════════════════════════════════╝" + Color.RESET)
     print()
+def print_divider():
+    print(Color.BLUE + "  ──────────────────────────────────────────────" + Color.RESET)
+
+def display_speed(action, step, speed):
+    bar_length = speed // 5
+    bar = "#" * bar_length
+    print(f" {Color.YELLOW}{action} #{step:<2}{Color.RESET}" f"Speed: {Color.GREEN}{speed:>3} mph{Color.RESET}" f"{Color.MAGENTA}{bar}{Color.RESET}")
+
+def display_car_info(label, car):
