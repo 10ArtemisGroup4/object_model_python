@@ -41,4 +41,8 @@ print(c.TITLE + "\n  --- Pet Information ---" + c.RESET)
 print(c.LABEL + "  Name        : " + c.VALUE + pet.get_name()        + c.RESET)
 print(c.LABEL + "  Animal Type : " + c.VALUE + pet.get_animal_type() + c.RESET)
 print(c.LABEL + "  Age         : " + c.VALUE + str(pet.get_age()) + " year(s)" + c.RESET)
- 
+
+#unique feature
+print(c.TITLE + "\n --- Fun Fact about your Pet ---" + c.RESET)
+print(c.DIM + " " + pet.get_fun_fact() + c.RESET)
+print()
