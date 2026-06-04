@@ -17,4 +17,7 @@ class Pet:
         self.__age = 0
 
     #setters
-    def set_name(self):
+    def set_name(self, name):
+        if not name.strip():
+            raise ValueError("Name cannot be empty.")
+        self.__name = name.strip().title()
