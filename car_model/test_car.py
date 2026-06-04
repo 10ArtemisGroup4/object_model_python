@@ -41,7 +41,7 @@ def test_drive():
 
     my_car = Car(year, make)
     print()
-    disply_car_info(" Your Car:", my_car)
+    display_car_info(" Your Car:", my_car)
 
     while True:
         try:
@@ -70,7 +70,7 @@ def test_drive():
 
     print()
     print(f"  {Color.BOLD}Braking...{Color.RESET}")
-    for i in range(1, brk + 1):
+    for i in range(1, brake + 1):
         my_car.brake()
         display_speed("Brake     ", i, my_car.get_speed())
 
@@ -105,4 +105,19 @@ def main():
     print()
     display_car_info(" Final State:", my_car)
     print_divider()
+
+#test drive unique feature
+    choice = input(
+        f"\n  {Color.MAGENTA}Would you like to test drive your own car? (yes/no):{Color.RESET} ").strip().lower()
+    print()
+    if choice in ("yes", "y"):
+        test_drive()
+    else:
+        print(f"  {Color.CYAN}Thanks for running the Car Test Program! {Color.RESET}")
+
+    print(Color.CYAN + Color.BOLD +
+          "\n  ╚══════════════════════════════════════════════╝\n" + Color.RESET)
+
+if __name__ == "__main__":
+    main()
 
