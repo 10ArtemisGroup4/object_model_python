@@ -29,7 +29,16 @@ while True:
 
 while True:
     try:
-        pet.set_age(input(c.LABEL + "Enter age(years): " + c.RESET))
+        pet.set_age(input(c.LABEL + "Enter age(animal years): " + c.RESET))
         break
     except ValueError as e:
         print(c.ERROR + f"Error: {e}\n" + c.RESET)
+
+#output section
+print(c.SUCCESS + "\n Pet registered successfully!" + c.RESET)
+
+print(c.TITLE + "\n  --- Pet Information ---" + c.RESET)
+print(c.LABEL + "  Name        : " + c.VALUE + pet.get_name()        + c.RESET)
+print(c.LABEL + "  Animal Type : " + c.VALUE + pet.get_animal_type() + c.RESET)
+print(c.LABEL + "  Age         : " + c.VALUE + str(pet.get_age()) + " year(s)" + c.RESET)
+ 
