@@ -30,4 +30,6 @@ class Car:
         if self.__speed > 0
             self.__speed -= 5
 
-    
+    #string representation
+    def __str__(self):
+        return (f"Car [{self.__year_model} {self.__make} " f"| Speed: {self.__speed} mph]")
