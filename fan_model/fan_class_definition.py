@@ -32,3 +32,23 @@ class Fan:
             print("Invalid speed! Use SLOW (1), MEDIUM (2), FAST (3)")
             return
         self._speed = value
+
+    @property
+    def radius(self):
+        return self._radius
+
+    @radius.setter
+    def radius(self, value):
+        self._radius = float(value)
+
+    @property
+    def color(self):
+        return self._color
+
+    @color.setter
+    def color(self, value):
+        self._color = value
+
+    @property
+    def on(self):
+        return self._on
