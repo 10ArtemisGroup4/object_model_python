@@ -21,4 +21,14 @@ class Fan:
         self.color = color
         self.on = on
 
-        
+    #getter and setters
+    @property
+    def speed(self):
+        return self._speed
+
+    @speed.setter
+    def speed(self, value):
+        if value not in (Fan.SLOW, Fan.MEDIUM, Fan.FAST):
+            print("Invalid speed! Use SLOW (1), MEDIUM (2), FAST (3)")
+            return
+        self._speed = value
