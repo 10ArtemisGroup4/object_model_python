@@ -68,11 +68,21 @@ def test_drive():
         except ValueError:
             print(f"  {Color.RED}[!] Invalid input.{Color.RESET}")
 
-        print()
-        print(f"  {Color.BOLD}Braking...{Color.RESET}")
-        for i in range(1, brk + 1):
-            my_car.brake()
-            display_speed("Brake     ", i, my_car.get_speed())
+    print()
+    print(f"  {Color.BOLD}Braking...{Color.RESET}")
+    for i in range(1, brk + 1):
+        my_car.brake()
+        display_speed("Brake     ", i, my_car.get_speed())
 
-        print()
-        display_car_info(" Final State:", my_car)
+    print()
+    display_car_info(" Final State:", my_car)
+
+#main program
+
+def main():
+    print_header(" Car Class - Test Program")
+
+    #create car object
+    my_car = Car(2024, "Toyota")
+    display_car_info(" Car Object:", my_car)
+
