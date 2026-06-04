@@ -10,4 +10,11 @@ class Color:
     BLUE = "\033[94m"
     MAGENTA = "\033[95m"
     CYAN = "\033[96m"
-    
+
+def print_header(title):
+    print()
+    print(Color.CYAN + Color.BOLD + "  ╔══════════════════════════════════════════════╗" + Color.RESET)
+    print(Color.CYAN + Color.BOLD + f"  ║  {title:<44}║" + Color.RESET)
+    print(Color.CYAN + Color.BOLD +
+          "  ╚══════════════════════════════════════════════╝" + Color.RESET)
+    print()
