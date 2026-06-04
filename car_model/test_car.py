@@ -27,3 +27,20 @@ def display_speed(action, step, speed):
     print(f" {Color.YELLOW}{action} #{step:<2}{Color.RESET}" f"Speed: {Color.GREEN}{speed:>3} mph{Color.RESET}" f"{Color.MAGENTA}{bar}{Color.RESET}")
 
 def display_car_info(label, car):
+    print(f"  {Color.BOLD}{label}{Color.RESET}")
+    print(f"    {Color.CYAN}Year  :{Color.RESET} {car.get_year_model()}")
+    print(f"    {Color.CYAN}Make  :{Color.RESET} {car.get_make()}")
+    print(f"    {Color.CYAN}Speed :{Color.RESET} {car.get_speed()} mph")
+    print()
+
+def test_drive():
+    print_header(" Build and Test Drive Your Own Car!")
+
+    year = input(f" {Color.YELLOW} Enter year model:{Color.RESET} ").strip()
+    make = input(f" {Color.YELLOW} Enter car make:{Color.RESET} ").strip()
+
+    my_car = Car(year, make)
+    print()
+    disply_car_info(" Your Car:", my_car)
+
+    
