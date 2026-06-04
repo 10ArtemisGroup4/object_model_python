@@ -52,3 +52,20 @@ class Fan:
     @property
     def on(self):
         return self._on
+
+    @on.setter
+    def on(self, value):
+        self._on = value
+
+    #unique feature
+    def status(self):
+        """Prints a one-line status summary of the fan."""
+        state = "ON" if self._on else "OFF"
+        speed_name = Fan._SPEED_LABELS[self._speed]
+        print(f"[{state}] Speed: {speed_name} | Radius: {self.radius} | Color: {self.color}")
+
+    #defining the string representation
+    def __str__(self):
+        state = "ON" if self._on else "OFF"
+        speed_name = Fan._SPEED_LABELS[self._speed]
+        return (f"Fan [speed={speed_name}, radius={self.radius}, color={self._color}, on={state}]")
