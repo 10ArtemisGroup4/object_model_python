@@ -23,4 +23,11 @@ class Car:
         self.__make = make
 
     #methods
-    def accel
+    def accelerate(self):
+        self.__speed += 5
+
+    def brake(self):
+        if self.__speed > 0
+            self.__speed -= 5
+
+    
