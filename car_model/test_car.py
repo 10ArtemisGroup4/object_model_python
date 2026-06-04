@@ -58,3 +58,21 @@ def test_drive():
         display_speed("Accelerate", i, my_car.get_speed())
 
     print()
+
+    while True:
+        try:
+            brake = int(input(f"  {Color.RED}How many times to brake?{Color.RESET}      "))
+            if brake >= 0:
+                break
+            print(f"  {Color.RED}[!] Enter a positive number.{Color.RESET}")
+        except ValueError:
+            print(f"  {Color.RED}[!] Invalid input.{Color.RESET}")
+
+        print()
+        print(f"  {Color.BOLD}Braking...{Color.RESET}")
+        for i in range(1, brk + 1):
+            my_car.brake()
+            display_speed("Brake     ", i, my_car.get_speed())
+
+        print()
+        display_car_info(" Final State:", my_car)
