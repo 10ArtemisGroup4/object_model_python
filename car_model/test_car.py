@@ -86,3 +86,23 @@ def main():
     my_car = Car(2024, "Toyota")
     display_car_info(" Car Object:", my_car)
 
+    #accelerate 5 times
+    print(f" {Color.BOLD}Accelerating 5 times...{Color.RESET}")
+    print_divider()
+    for i in range(1, 6):
+        my_car.accelerate()
+        display_speed("Accelerate", i, my_car.get_speed())
+
+    print()
+
+    #brake 5 times
+    print(f"  {Color.BOLD}Braking 5 times...{Color.RESET}")
+    print_divider()
+    for i in range(1, 6):
+        my_car.brake()
+        display_speed("Brake     ", i, my_car.get_speed())
+
+    print()
+    display_car_info(" Final State:", my_car)
+    print_divider()
+
