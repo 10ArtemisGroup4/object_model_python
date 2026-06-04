@@ -1,4 +1,4 @@
-from Fan import Fan
+from fan_class_definition import Fan
 
 def display_fan(label, fan):
     print(f" {label}")
