@@ -43,4 +43,18 @@ def test_drive():
     print()
     disply_car_info(" Your Car:", my_car)
 
-    
+    while True:
+        try:
+            acc = int(input(f" {Color.GREEN} Enter acceleration:{Color.RESET} "))
+            if acc >= 0:
+                break
+            print(f" {Color.RED} Input a positive number.{Color.RESET}")
+        except ValueError:
+            print(f" {Color.RED} Invalid Acceleration.{Color.RESET}")
+    print()
+    print(f"  {Color.BOLD}Accelerating...{Color.RESET}")
+    for i in range(1, acc + 1):
+        my_car.accelerate()
+        display_speed("Accelerate", i, my_car.get_speed())
+
+    print()
