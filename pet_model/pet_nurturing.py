@@ -21,3 +21,15 @@ while True:
         print(c.ERROR + f"Error: {e}\n" + c.RESET)
 
 while True:
+    try:
+        pet.set_animal_type(input(c.LABEL + "Enter animal type: " + c.RESET))
+        break
+    except ValueError as e:
+        print(c.ERROR + f"Error: {e}\n" + c.RESET)
+
+while True:
+    try:
+        pet.set_age(input(c.LABEL + "Enter age(years): " + c.RESET))
+        break
+    except ValueError as e:
+        print(c.ERROR + f"Error: {e}\n" + c.RESET)
